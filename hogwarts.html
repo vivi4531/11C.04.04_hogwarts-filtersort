@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hacked Hogwarts Student List</title>
+    <title>11C.04.04 - Hacked Hogwarts Student List</title>
     <link rel="stylesheet" href="hogwarts.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -13,10 +13,30 @@
     />
   </head>
   <body>
-    <h1>Hogwarts - Class of 1991</h1>
+    <div id="heading">
+      <h1>Hogwarts</h1>
+      <h2>School of Witchcraft and Wizardry</h2>
+      <h3>Class Of 1991</h3>
+    </div>
 
-    <select name="sortingList" id="sortingList">
-      <option>Sorting</option>
+    <!-- Filter-->
+    <div class="filterbtns">
+      <button class="filter raise" data-action="filter" data-filter="all">All</button>
+      <button class="filter raise" data-action="filter" data-filter="gryffindor">Gryffindor</button>
+      <button class="filter raise" data-action="filter" data-filter="hufflepuff">Hufflepuff</button>
+      <button class="filter raise" data-action="filter" data-filter="ravenclaw">Ravenclaw</button>
+      <button class="filter raise" data-action="filter" data-filter="slytherin">Slytherin</button> 
+    </div>
+    
+    <div class="filterbtns">
+      <button class="filter raise" data-action="filter" data-filter="inquisitorial-squad">Inquisitorial Squad</button>
+      <button class="filter raise" data-action="filter" data-filter="unexpelled">Not expelled</button>
+      <button class="filter raise" data-action="filter" data-filter="expelled">Expelled</button>
+    </div>
+
+     <!-- Sorting -->
+     <select name="sortingList" id="sortingList">
+      <option>Sort after</option>
       <option value="firstnamea-z">Firstname A-Z</option>
       <option value="firstnamez-a">Firstname Z-A</option>
       <option value="lastnamea-z">Lastname A-Z</option>
@@ -25,28 +45,7 @@
       <option value="housez-a">House Z-A</option>
     </select>
 
-    <div id="filterbtns">
-      <button class="filter" data-action="filter" data-filter="all">All</button>
-      <button class="filter" data-action="filter" data-filter="gryffindor">
-        Gryffindor
-      </button>
-      <button class="filter" data-action="filter" data-filter="hufflepuff">
-        Hufflepuff
-      </button>
-      <button class="filter" data-action="filter" data-filter="ravenclaw">
-        Ravenclaw
-      </button>
-      <button class="filter" data-action="filter" data-filter="slytherin">
-        Slytherin
-      </button>
-      <button class="filter" data-action="filter" data-filter="unexpelled">
-        Not expelled
-      </button>
-      <button class="filter" data-action="filter" data-filter="expelled">
-        Expelled
-      </button>
-    </div>
-
+    <!-- Student template -->
     <section class="container"></section>
 
     <template>
@@ -56,6 +55,7 @@
       </article>
     </template>
 
+    <!-- Popup -->
     <section id="popup">
       <article>
         <button id="close">X</button>
@@ -69,13 +69,7 @@
       </article>
     </section>
 
-    <footer>
-      Pictures from:
-      <a
-        href="https://unsplash.com/photos/Bf9PT5qVZvM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
-        >Unsplash.com</a
-      >
-    </footer>
+    <footer>© VIVI MORTENSEN 2021</footer>
 
     <script src="hogwarts.js"></script>
   </body>

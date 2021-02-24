@@ -1,26 +1,24 @@
 /* RESET START */
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   width: 100%;
 }
-/* RESET END */
+
+/* RESET SLUT */
 
 /* FONT START*/
 
 @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-
-#heading {
-  text-align: center;
-}
-
-#heading h2 {
-  margin-bottom: 50px;
-}
 
 h1 {
   font-family: "Cinzel Decorative", cursive;
@@ -49,8 +47,6 @@ p {
 /* FONT SLUT */
 
 body {
-  padding: 50px;
-
   /* Gradient code from https://uigradients.com/ */
   background: #0f2027; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -67,36 +63,13 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* SORTING LIST START */
-select {
-  background-color: lightgrey;
-  border: none;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: "Comfortaa", cursive;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1rem;
-  color: black;
-  background: #bdc3c7;
-  background: -webkit-linear-gradient(to top, #2c3e50, #bdc3c7);
-  background: linear-gradient(to top, #2c3e50, #bdc3c7);
-  margin: 0 auto;
-}
-
-#sortingList {
-  display: flex;
-  text-align: center;
-}
-/* SORTING LIST END */
-
 /* FILTER BUTTONS START */
-.filterbtns {
+.filterbuttons {
   display: flex;
   justify-content: center;
 }
 
-.filterbtns button {
+.filterbuttons button {
   margin: 10px;
 }
 
@@ -106,10 +79,8 @@ button {
   padding: 10px;
   border-radius: 10px;
 
-  font-family: "Comfortaa", cursive;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
   color: black;
 
   background: #bdc3c7;
@@ -127,7 +98,7 @@ button {
 /* FILTER BUTTONS END */
 
 /* STUDENT LIST START */
-.container {
+#container {
   width: 90vw;
   max-width: 1000px;
   margin: 0 auto;
@@ -135,7 +106,7 @@ button {
   margin-bottom: 20px;
   display: grid;
   grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /*grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
 }
 
 article {
@@ -144,10 +115,6 @@ article {
   border-radius: 15px;
   cursor: pointer;
   box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
-}
-
-article img {
-  width: 20%;
 }
 
 /* STUDENT LIST END */
@@ -271,7 +238,5 @@ footer {
   font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
-  color: #cccccc;
-  padding: 50px;
 }
 /* FOOTER END */
