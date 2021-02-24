@@ -24,6 +24,9 @@ function readBtns() {
     .querySelectorAll("[data-action='filter']")
     .forEach((button) => button.addEventListener("click", selectedFilter));
 
+//Search 
+//document.querySelector("#searchbtn").addEventListener("click", searchForStudent); 
+
   //looks after changes in the options under #sortingList
   document.querySelector("#sortingList").onchange = function () {
     selectedSort(this.value);
@@ -189,6 +192,8 @@ function prepareObjects(jsonData) {
       nickname: "-not set yet-",
       photo: "-not set yet-",
       house: "-not set yet-",
+      gender: " ",
+      prefect: false
     };
     // TODO: MISSING CODE HERE !!!
 
@@ -303,6 +308,9 @@ function prepareObjects(jsonData) {
     //House is already a seperate string so just adds the age to the object
     student.house = house.substring(0, 1).toUpperCase() + house.substring(1);
 
+    //Gender 
+    student.gender = jsonObject.gender; 
+
     //Adds all objects (students) into the array
     allStudents.push(student);
   });
@@ -330,6 +338,26 @@ function showStudentList(students) {
     container.appendChild(klon);
   });
 }
+
+//Search 
+// function searchForStudent() {
+//   var input, filter, ul, li, a, i, txtValue;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   ul = document.getElementById("myUL");
+//   li = ul.getElementsByTagName("li");
+//   for (i = 0; i < li.length; i++) {
+//       a = li[i].getElementsByTagName("a")[0];
+//       txtValue = a.textContent || a.innerText;
+//       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//           li[i].style.display = "";
+//       } else {
+//           li[i].style.display = "none";
+//       }
+//   }
+// }
+
+
 
 function openSingleStudent(student) {
   popup.style.display = "block";
@@ -360,7 +388,6 @@ function openSingleStudent(student) {
     popup.querySelector("img").src = "images/" + student.photo;
   }
 
-  document
-    .querySelector("#close")
-    .addEventListener("click", () => (popup.style.display = "none"));
+  document.querySelector("#close").addEventListener("click", () => (popup.style.display = "none"));
+
 }
